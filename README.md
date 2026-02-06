@@ -53,19 +53,19 @@ Runs on CPU
 
 ## 📂 Project Structure
 Crowd-Density-Detection-System/
-├── assets/                       # Output screenshots
+├── assets/                      
 │   ├── output1.png
 │   └── output2.png
 │
-├── data/                         # Input images
+├── data/                         
 │   └── images/
 │       ├── grp.jpg
 │       └── bus.jpg
 │
-├── weights/                      # YOLOv5 pretrained weights
+├── weights/                    
 │   └── yolov5s.pt
 │
-├── yolov5/                       # Detection codebase
+├── yolov5/                       
 │   ├── detect.py
 │   ├── models/
 │   ├── utils/
