@@ -52,6 +52,7 @@ Note: This project uses object detection–based counting, not density-map based
 Runs on CPU
 
 ## 📂 Project Structure
+```text
 Crowd-Density-Detection-System/
 ├── assets/                      
 │   ├── output1.png
@@ -63,7 +64,8 @@ Crowd-Density-Detection-System/
 │       └── bus.jpg
 │
 ├── weights/                    
-│   └── yolov5s.pt
+│   └── download_weights.sh   # script to download YOLOv5 weights
+|   └── yolov5s.pt            # downloaded after running script
 │
 ├── yolov5/                       
 │   ├── detect.py
@@ -72,21 +74,32 @@ Crowd-Density-Detection-System/
 │   └── runs/
 │       └── detect/
 │           ├── exp/
-│           └── exp2/
+│           └── exp1/
 │
 ├── requirements.txt
 └── README.md
-
+```
 
 ## ▶️ How to Run
+
 1️⃣ Activate Environment
+```text
 conda activate crowd
+```
 
 2️⃣ Run on Image
+```text
 python detect.py --weights yolov5s.pt --source data/images/grp.jpg
+```
 
 3️⃣ Run on Webcam
+```text
 python detect.py --weights yolov5s.pt --source 0
+```
+4️⃣ Run on Video
+```text
+python detect.py --weights yolov5s.pt --source data/videos/crowd.mp4
+```
 
 ## 📊 Output
 
@@ -95,13 +108,13 @@ Bounding boxes around detected people
 Text on frame:
 Number of people: X
 
-### 🖼️ Sample Outputs
 
-**Image 1 – Crowd Detection**
-![Output 1](assets/output1.png)
+## 🖼️ Sample Outputs
 
-**Image 2 – Crowd Detection**
-![Output 2](assets/output2.png)
+| Crowd Detection – Image 1 | Crowd Detection – Image 2 |
+|---------------------------|---------------------------|
+| ![](assets/output1.png)   | ![](assets/output2.png)   |
+
 
 
 All detection results are automatically saved in:
